@@ -12,16 +12,16 @@ Chart1 = alt.Chart(India_Transposed.reset_index()).mark_bar().encode(
        alt.X('index:N',title='Year'),
        alt.Y('Fuel exports (% of merchandise exports):Q',title='Fuel Exports')
        ). properties(
-                width=400,
-                height=400,
+                width=200,
+                height=200,
                 title='India Fuel Exports (Source - World Bank)')
 
 Chart2 = alt.Chart(India_Transposed.reset_index()).mark_bar(color='Pink').encode(
        alt.X('index:N',title='Year'),
        alt.Y('International tourism, receipts for passenger transport items (current US$):Q',title='International tourism Receipts (US$)')
        ). properties(
-                width=400,
-                height=400,
+                width=200,
+                height=200,
                 title='India Tourism Receipts (Source - World Bank)')
 Chart3=Chart1|Chart2
 st.set_page_config(page_title="World Bank Data for India",layout="wide",initial_sidebar_state="expanded")
